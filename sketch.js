@@ -19,7 +19,7 @@ function setup() {
     
   w = color(255);
   angleMode(DEGREES);
-    st = random(width/10);
+    st = random(width/20);
 }
 
 function draw() {
@@ -146,7 +146,7 @@ function setup() {
   ralpha = random(100);
   w = color(255);
   angleMode(DEGREES);
-    st = random(width/10);
+    st = random(width/20);
 }
 }  
 
