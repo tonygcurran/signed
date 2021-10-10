@@ -5,10 +5,10 @@ var rot;
 var grad2, galpha, balpha, ralpha, w;
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(800, 600);
   rot = 0;
-   grad1 = createGraphics(displayWidth, displayHeight); 
-  grad2 = createGraphics(displayWidth, displayHeight);
+   grad1 = createGraphics(width, height); 
+  grad2 = createGraphics(width, height);
   galpha = random(100);
   balpha = random(150,255);
   ralpha = random(100);
@@ -19,7 +19,7 @@ function setup() {
     
   w = color(255);
   angleMode(DEGREES);
-    st = random(100);
+    st = random(width/10);
 }
 
 function draw() {
@@ -27,8 +27,8 @@ function draw() {
   noStroke();
   if (rot <= 0 || rot >= 180){
     for (i = 0; i <10; i++){
-       wigNumx[i] = random(displayWidth/3, displayWidth/3*2);
-      wigNumy[i] = random(displayHeight/3, displayHeight/3*2);
+       wigNumx[i] = random(width/3, width/3*2);
+      wigNumy[i] = random(height/3, height/3*2);
         st = random(100);
         galpha = galpha+random(-1,1);
         balpha = balpha+random(-1,1);
@@ -40,14 +40,14 @@ ralpha = ralpha+random(-1,1);
   rectMode(CENTER);
  // fill(0,0,255);
   push();
-  translate(displayWidth/2, displayHeight/2);
+  translate(width/2, height/2);
   rotate(rot);
   scale(2);
   //rect(0,0,displayWidth, displayHeight);
 gradient2();
   pop();
   push()
-    translate(-displayWidth/2, -displayHeight/2);
+    translate(-width/2, -height/2);
   scale(2);
   gradient1();
   pop();
@@ -136,7 +136,18 @@ function touchStarted() {
   let fs = fullscreen;
 noCursor();
   fullscreen(fs);
-setup();
+function setup() {
+  createCanvas(displayWidth, displayHeight);
+  rot = 0;
+   grad1 = createGraphics(displayWidth, displayHeight); 
+  grad2 = createGraphics(displayWidth, displayHeight);
+  galpha = random(100);
+  balpha = random(150,255);
+  ralpha = random(100);
+  w = color(255);
+  angleMode(DEGREES);
+    st = random(width/10);
+}
 }  
 
 
