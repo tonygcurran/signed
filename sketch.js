@@ -5,7 +5,7 @@ var rot;
 var grad2, galpha, balpha, ralpha, w;
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(725, 543);
   rot = 0;
    grad1 = createGraphics(width, height); 
   grad2 = createGraphics(width, height);
